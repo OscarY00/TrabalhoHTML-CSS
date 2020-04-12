@@ -1,0 +1,210 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+#logoOlim{
+    width: 250px;
+    display: block;
+    margin: 10px auto;
+}
+
+
+#corpo{
+    width:960px;
+    margin:0 auto;
+    padding: 2%;
+    
+}
+h1{
+    text-align: center;
+    font-family: 'Arial';
+    margin: 40px;
+    text-decoration: underline;
+}
+h2{
+    text-align: left;
+    font-family: 'Arial';
+
+}
+
+.paragraph{
+    font-family: 'Arial';
+    font-size: 20px;
+    padding: 19px;
+
+    
+}
+
+.txt{
+    margin: 10px;
+}
+
+
+#imagem01{
+  margin: 2% auto;
+  width: 98%;
+  height: 60%;
+  display: block;
+    
+}
+
+.content{
+
+    display: flexbox;
+    margin: auto;
+    margin-left: 40px;
+
+}
+
+.multicol{
+    width: 100%;
+    text-align: left;
+
+}
+
+td{
+    width: 33%;
+    text-align: left;
+    vertical-align: top;
+}
+
+#rodape{
+    
+    font-size:14px;
+	color: crimson;
+	height: 55px;
+	margin-top: 80px;
+	margin-bottom: auto;
+	line-height: none;
+	text-align:left;
+	width: 100%;
+	background: crimson;
+	
+    
+}
+
+#rodape p{
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    padding: 5px;
+}
+
+#menu{
+
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    height: 51px;
+    background-color: crimson;
+    font-family: 'Arial';
+    
+
+}
+
+#menu ul{
+    list-style: none;
+    position: relative;
+
+}
+
+#menu ul li{
+    width: 200px;
+    float: left;
+}
+
+#menu a{
+    padding: 15px;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    background-color: crimson;
+    color: white;
+    font-size: large;
+}
+#menu a:hover{
+    background-color: lightsalmon;
+    color: black;
+}
+
+label[for='bt_menu']{
+    padding: 5px;
+    background-color: crimson;
+    color: white;
+    font-family: 'Arial';
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    display: none;
+}
+#bt_menu{
+    display: none;
+
+}
+
+@media(max-width: 1050px){
+    label[for='bt_menu']{
+        display: block;
+    }
+    #bt_menu:checked ~ #menu{
+        margin-left: 0;
+    }
+    #menu{
+        margin-top: 5px;
+        margin-left: -100%;
+        transition: all .4s;
+    }
+    #menu ul li{
+        width: 100%;
+        float: none;
+
+    }
+
+    .multicol{
+        padding: 0;
+        font-size: 15px;
+        border-collapse: collapse;
+        width: 70%;
+        align-items: center;
+        
+        margin-top: 20px;
+        margin-bottom: 40px;
+    
+    }
+   
+}
+.multicol th, .multicol td{padding: 8px;}
+@media only screen and (max-width: 480px){
+    .content{width: 100%;}
+
+    .multicol thead{
+        display: none;
+    }
+    .multicol tbody td{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+@media only screen and (max-width: 1200px){
+    .content{
+        width: 90%;
+
+    }
+   
+    
+    .multicol tbody tr td:nth-child(1){width: 20%;}
+    .multicol tbody tr td:nth-child(2){width: 20%;}
+    .multicol tbody tr td:nth-child(3){width: 20%;}
+}
+
+
+
